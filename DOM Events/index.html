@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		img{
+			width: 10%;
+			height: auto;
+			max-height: 15%;
+		}
+		body{
+			height: 100vh;
+		}
+		img:hover{
+			cursor: pointer;
+			box-shadow: 0 0 0 1px red;
+    		transition: all 800ms ease-out;
+		}
+
+	</style>
+<div style="display: flex ;height: 100vh; justify-content:center; align-items: center;">
+<img id="play" src="play-buttton.png">
+	
+<img id="pause" src="pause.png">
+	
+</div>
+<audio id="song">
+	<source src="song.mp3" type="audio/mp3">
+</audio>
+
+<script type="text/javascript">
+	let song = document.getElementById("song");
+	let play = document.getElementById("play");
+	let pause = document.getElementById("pause");
+
+	
+	
+	play.addEventListener("click",function (){
+		song.play()
+	})
+	pause.addEventListener("click",function (){
+		song.pause()
+	})
+</script>
+</body>
+</html>
